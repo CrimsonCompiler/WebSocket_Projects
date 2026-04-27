@@ -1,0 +1,34 @@
+-- Active: 1777288529559@@127.0.0.1@5432@stream_space
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(55) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE rooms (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    room_id INT NOT NULL REFERENCES rooms (id) ON DELETE CASCADE,
+    user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+    context TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO rooms (name) VALUES ('GENERAL CHAT'), ('Backend Team');
+
+-- GETTING ALL DATA FROM USERS
+SELECT *
+FROM users;
+
+SELECT *
+FROM rooms;
+
+SELECT *
+FROM messages;
