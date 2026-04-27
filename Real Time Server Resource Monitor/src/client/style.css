@@ -1,0 +1,40 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #121212;
+     color: #ffffff;
+     margin: 0;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .dashboard {
+     display: flex;
+     gap: 20px;
+     width: 100%;
+     max-width: 1000px;
+     margin-top: 20px;
+ }
+
+ .card {
+     background-color: #1e1e1e;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+     flex: 1;
+ }
+
+ .status {
+     padding: 10px;
+     border-radius: 5px;
+     background: #ff4757;
+     text-align: center;
+     font-weight: bold;
+     margin-bottom: 20px;
+     transition: background 0.3s;
+ }
+
+ .connected {
+     background: #2ed573;
+ }
