@@ -23,7 +23,7 @@ CREATE TABLE messages (
 
 INSERT INTO rooms (name) VALUES ('GENERAL CHAT'), ('Backend Team');
 
--- GETTING ALL DATA FROM USERS
+-- GETTING ALL DATA FROM ALL TABLES
 SELECT *
 FROM users;
 
@@ -32,3 +32,5 @@ FROM rooms;
 
 SELECT *
 FROM messages;
+
+-- 
