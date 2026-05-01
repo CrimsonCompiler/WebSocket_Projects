@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use("/api", authRouter);
+app.use("/api/v1", authRouter);
 
 // Health check
 app.get("/", (req, res) => {
