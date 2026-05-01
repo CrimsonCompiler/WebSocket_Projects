@@ -3,8 +3,8 @@ import pool from "../config/db.js";
 import type { Request, Response } from "express";
 
 interface User {
-  email: string;
   username: string;
+  email: string;
   password: string;
 }
 
